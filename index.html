@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>페이지 텔레포터</title>
+    </head>
+    <body>
+        <h1>안녕하세요</h1>
+        <p>반갑습니다</p>
+        <form id="form" action="Debug를 열었네...">
+            입력을 하시면 됩니다
+            <input type="text" id="1" placeholder="1" required>
+            <input type="text" id="2" placeholder="2" required>
+            <input type="submit">
+        </form>
+        <script>
+            const form = document.getElementById('form');
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+                var a = Math.random();
+                var text;
+                if (a <= 0.5){
+                    text = document.getElementById('1');
+                }else {
+                    text = document.getElementById('2');
+                }
+                var a = Math.random();
+                if (a < 0.25){
+                    window.location.href = "https://www.naver.com";
+                }else if (a < 0.5){
+                    window.location.href = "https://www.google.com";
+                }else if (a < 0.75){
+                    window.location.href = "https://classroom.google.com";
+                }else {
+                    window.location.href = "https://example.com";
+                }
+            })
+        </script>
+    </body>
+</html>
